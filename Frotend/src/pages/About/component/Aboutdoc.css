@@ -1,0 +1,157 @@
+/* ===== DOCTOR ABOUT SECTION ===== */
+.doctor-about-section {
+  padding: 100px 8%;
+  background: #f8f8f8;
+  /* overflow: hidden; */
+}
+
+.doctor-about-wrapper {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 70px;
+  min-height: 100vh;
+}
+
+/* ===== LEFT STICKY IMAGE ===== */
+.doctor-about-image {
+  flex: 0 0 42%;
+  position: sticky;
+  top: 120px;
+  align-self: flex-start;
+  height: fit-content;
+}
+
+.doctor-about-image img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 25px;
+  display: block;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== RIGHT CONTENT ===== */
+.doctor-about-content {
+  flex: 0 0 calc(58% - 70px);
+  position: relative;
+  z-index: 1;
+}
+
+.doctor-about-tag {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50px;
+  color: #16216d;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 20px;
+  background: #ffffff;
+}
+
+.doctor-about-content h2 {
+  font-size: 38px;
+  line-height: 1.1;
+  color: #16216d;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.doctor-about-description {
+  padding-right: 15px;
+}
+
+.doctor-about-description p {
+  color: #5f6470;
+  line-height: 1.9;
+  font-size: 17px;
+  margin-bottom: 22px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .doctor-about-content h2 {
+    font-size: 48px;
+  }
+
+  .doctor-about-image img {
+    height: 600px;
+  }
+}
+
+@media (max-width: 991px) {
+  .doctor-about-wrapper {
+    flex-direction: column;
+    min-height: auto;
+    gap: 40px;
+  }
+
+  .doctor-about-image {
+    position: relative;
+    top: 0;
+    width: 100%;
+    flex: none;
+  }
+
+  .doctor-about-image img {
+    height: auto;
+    max-height: 500px;
+  }
+
+  .doctor-about-content {
+    width: 100%;
+    flex: none;
+  }
+
+  .doctor-about-content h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .doctor-about-section {
+    padding: 70px 5%;
+  }
+
+  .doctor-about-wrapper {
+    gap: 30px;
+  }
+
+  .doctor-about-content h2 {
+    font-size: 34px;
+  }
+
+  .doctor-about-description p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .doctor-about-section {
+    padding: 50px 20px;
+  }
+
+  .doctor-about-content h2 {
+    font-size: 28px;
+  }
+
+  .doctor-about-description p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .doctor-about-tag {
+    font-size: 12px;
+    padding: 8px 18px;
+  }
+
+  .doctor-about-image img {
+    max-height: 350px;
+  }
+
+  .doctor-about-wrapper {
+    gap: 25px;
+  }
+}

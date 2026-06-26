@@ -1,0 +1,550 @@
+/* GallerySection.css */
+
+/* ===== GALLERY SECTION ===== */
+.gallery-section {
+  background: #ffffff;
+  padding: 80px 20px 60px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+.gallery-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.gallery-tag {
+  display: inline-block;
+  color: #1b2375;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
+
+.gallery-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #13195c;
+  line-height: 1.2;
+  margin: 0 0 10px 0;
+}
+
+.gallery-title-highlight {
+  background: linear-gradient(135deg, #1b2375, #3b44b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.gallery-subtitle {
+  font-size: 1.1rem;
+  color: #6b7285;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ===== SLIDER WRAPPER ===== */
+.gallery-slider-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* ===== SLIDER ===== */
+.gallery-slider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+/* ===== NAVIGATION BUTTONS ===== */
+.gallery-nav-btn {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  color: #1b2375;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.gallery-nav-btn:hover {
+  background: linear-gradient(135deg, #1b2375, #3b44b0);
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(27, 35, 117, 0.25);
+}
+
+.gallery-nav-btn:active {
+  transform: scale(0.95);
+}
+
+/* ===== IMAGES CONTAINER ===== */
+.gallery-images-container {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.gallery-images-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  transition: all 0.5s ease;
+}
+
+/* ===== IMAGE CARD ===== */
+.gallery-image-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.gallery-image-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.gallery-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.gallery-image-card:hover .gallery-image-wrapper img {
+  transform: scale(1.08);
+}
+
+/* ===== IMAGE OVERLAY ===== */
+.gallery-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 20px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #ffffff;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.gallery-image-card:hover .gallery-image-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.gallery-image-category {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  backdrop-filter: blur(4px);
+}
+
+.gallery-image-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.gallery-image-view-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gallery-image-view-btn:hover {
+  background: #ffffff;
+  color: #1b2375;
+  transform: scale(1.05);
+}
+
+/* ===== DOTS ===== */
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.gallery-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #d1d5db;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.gallery-dot:hover {
+  background: #9ca3af;
+  transform: scale(1.1);
+}
+
+.gallery-dot.active {
+  background: linear-gradient(135deg, #1b2375, #3b44b0);
+  width: 36px;
+  border-radius: 6px;
+}
+
+/* ===== VIEW GALLERY BUTTON ===== */
+.gallery-btn-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.gallery-view-btn {
+  background: linear-gradient(135deg, #1b2375, #3b44b0);
+  border: none;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 16px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 6px 20px rgba(27, 35, 117, 0.25);
+  letter-spacing: 0.3px;
+}
+
+.gallery-view-btn i {
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.gallery-view-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(27, 35, 117, 0.35);
+  background: linear-gradient(135deg, #13195c, #2a32a0);
+}
+
+.gallery-view-btn:hover i:last-child {
+  transform: translateX(6px);
+}
+
+.gallery-view-btn:active {
+  transform: scale(0.96);
+}
+
+/* ========================================== */
+/* ===== FULL IMAGE MODAL ===== */
+/* ========================================== */
+
+.gallery-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.gallery-modal-content {
+  position: relative;
+  max-width: 900px;
+  width: 95%;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-modal-close:hover {
+  background: rgba(255, 0, 0, 0.6);
+  transform: rotate(90deg);
+}
+
+.gallery-modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-modal-nav:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev-modal {
+  left: 20px;
+}
+
+.next-modal {
+  right: 20px;
+}
+
+.gallery-modal-image-wrapper {
+  position: relative;
+}
+
+.gallery-modal-image-wrapper img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+}
+
+.gallery-modal-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 30px 25px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: #ffffff;
+}
+
+.gallery-modal-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.gallery-modal-info h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.gallery-modal-info p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* ========================================== */
+/* ============ RESPONSIVE ================== */
+/* ========================================== */
+
+/* Tablet: Show 2 images */
+@media (max-width: 992px) {
+  .gallery-images-track {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .gallery-title {
+    font-size: 2.2rem;
+  }
+
+  .gallery-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .gallery-modal-info h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile: Show 1 image */
+@media (max-width: 600px) {
+  .gallery-section {
+    padding: 50px 16px 40px;
+  }
+
+  .gallery-images-track {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery-title {
+    font-size: 1.8rem;
+  }
+
+  .gallery-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .gallery-nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+
+  .prev-btn {
+    left: -8px;
+  }
+
+  .next-btn {
+    right: -8px;
+  }
+
+  .gallery-nav-btn:hover {
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .gallery-image-wrapper {
+    aspect-ratio: 4/3;
+  }
+
+  .gallery-view-btn {
+    padding: 14px 28px;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .gallery-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .gallery-dot.active {
+    width: 30px;
+  }
+
+  .gallery-modal-content {
+    width: 98%;
+    border-radius: 12px;
+  }
+
+  .gallery-modal-close {
+    top: 10px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .gallery-modal-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .prev-modal {
+    left: 8px;
+  }
+
+  .next-modal {
+    right: 8px;
+  }
+
+  .gallery-modal-info {
+    padding: 20px 16px 16px;
+  }
+
+  .gallery-modal-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .gallery-modal-info p {
+    font-size: 0.85rem;
+  }
+}

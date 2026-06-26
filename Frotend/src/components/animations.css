@@ -1,0 +1,311 @@
+/* ============================================
+   COMPLETE WEBSITE ANIMATIONS - FIXED
+   ============================================ */
+
+/* --------------------------------------------
+   1. SCROLL REVEAL ANIMATIONS (Fade + Scale)
+   -------------------------------------------- */
+
+/* Base animation classes - FIXED: Content visible by default */
+.animate-on-scroll {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Only hide when not in viewport - but show immediately */
+.animate-on-scroll:not(.visible) {
+    opacity: 0;
+    transform: scale(0.85) translateY(30px);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Different animation variations */
+.animate-fade-up {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-fade-up:not(.visible) {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.animate-fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-fade-left {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-fade-left:not(.visible) {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.animate-fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-fade-right {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-fade-right:not(.visible) {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.animate-fade-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-scale {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-scale:not(.visible) {
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+.animate-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Staggered animations for cards - FIXED */
+.stagger-children > * {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stagger-children:not(.visible) > * {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.stagger-children.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.5s; }
+
+/* --------------------------------------------
+   2. HOVER ANIMATIONS
+   -------------------------------------------- */
+
+/* Card hover scale */
+.hover-scale {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 60px rgba(27, 35, 117, 0.15);
+}
+
+/* Image hover zoom */
+.hover-zoom {
+    overflow: hidden;
+}
+
+.hover-zoom img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Button hover glow */
+.hover-glow {
+    transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 30px rgba(27, 35, 117, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Floating animation for images */
+.float-animation {
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Slow float */
+.float-slow {
+    animation: floatSlow 4s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* --------------------------------------------
+   3. IMAGE POP-UP ANIMATION (Scale + Fade)
+   -------------------------------------------- */
+
+.image-pop {
+    animation: imagePop 0.1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+@keyframes imagePop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Cards pop-up with stagger - FIXED */
+.card-pop {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transition: all 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-pop:not(.visible) {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+}
+
+.card-pop.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.card-pop:nth-child(1) { transition-delay: 0.1s; }
+.card-pop:nth-child(2) { transition-delay: 0.2s; }
+.card-pop:nth-child(3) { transition-delay: 0.3s; }
+.card-pop:nth-child(4) { transition-delay: 0.4s; }
+.card-pop:nth-child(5) { transition-delay: 0.5s; }
+
+/* --------------------------------------------
+   4. UTILITY CLASSES - DELAYS
+   -------------------------------------------- */
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+.delay-7 { transition-delay: 0.7s; }
+.delay-8 { transition-delay: 0.8s; }
+
+.duration-fast { transition-duration: 0.3s; }
+.duration-normal { transition-duration: 0.6s; }
+.duration-slow { transition-duration: 1s; }
+
+/* --------------------------------------------
+   5. SCROLL TRIGGERED ANIMATIONS
+   -------------------------------------------- */
+
+/* Pop-up on scroll - FIXED */
+.pop-up {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pop-up:not(.active) {
+    opacity: 0;
+    transform: scale(0.8) translateY(40px);
+}
+
+.pop-up.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Slide from left - FIXED */
+.slide-left {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-left:not(.active) {
+    opacity: 0;
+    transform: translateX(-60px);
+}
+
+.slide-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide from right - FIXED */
+.slide-right {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-right:not(.active) {
+    opacity: 0;
+    transform: translateX(60px);
+}
+
+.slide-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Zoom in - FIXED */
+.zoom-in {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.zoom-in:not(.active) {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.zoom-in.active {
+    opacity: 1;
+    transform: scale(1);
+}

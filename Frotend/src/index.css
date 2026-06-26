@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* index.css - minimal tailwind base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* any extra custom styles */
+
+/* ─── RESET & BASE ─── */
+
+
+
+html , body {
+    overflow-x: hidden;
+}
+
+

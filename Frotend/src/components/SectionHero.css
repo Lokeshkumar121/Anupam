@@ -1,0 +1,288 @@
+/* SectionHero.css */
+
+/* ===== SECTION ===== */
+.about-hero-section1 {
+  background: #ffffff;
+  font-family: 'Inter', -apple-system, sans-serif;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
+
+/* ===== BACKGROUND DIV WITH GRADIENT ===== */
+.about-hero-bg1 {
+  background: linear-gradient(120deg, #ffffff 0%, #f5f8ff 35%, #dfe8ff 70%, #9ea8ff 100%) !important;
+  padding: 80px 40px 120px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.about-hero-bg-content1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-hero-tag1 {
+  display: inline-block;
+  color: #1b2375;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
+
+.about-hero-title1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #13195c;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* ===== 3-COLUMN GRID (Bigger Cards) ===== */
+.services-wrapper {
+  max-width: 1200px;
+  margin: 100px auto 0;
+  padding: 0 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== SINGLE CARD (Bigger) ===== */
+.service-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.10);
+}
+
+/* ===== IMAGE (Taller) ===== */
+.service-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+/* ===== CONTENT (More padding) ===== */
+.service-content {
+  padding: 24px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.service-content h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #13195c;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.service-content p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #6b7285;
+  margin: 0 0 20px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===== READ MORE BUTTON (Bigger) ===== */
+.read-more-btn {
+  margin-top: auto;
+  background: linear-gradient(135deg, #1b2375, #3b44b0);
+  border: none;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 12px 24px;
+  border-radius: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(27, 35, 117, 0.20);
+  letter-spacing: 0.3px;
+  width: fit-content;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.read-more-btn i {
+  font-size: 0.85rem;
+  transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: linear-gradient(135deg, #13195c, #2a32a0);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(27, 35, 117, 0.35);
+}
+
+.read-more-btn:hover i {
+  transform: translateX(5px);
+}
+
+.read-more-btn:active {
+  transform: scale(0.96);
+}
+
+/* ===== VIEW MORE BUTTON (Bigger) ===== */
+.view-more-wrapper {
+  max-width: 1200px;
+  margin: 10px auto 60px;
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.view-more-btn {
+  background: transparent;
+  border: 2.5px solid #1b2375;
+  color: #1b2375;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 16px 48px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 15px rgba(27, 35, 117, 0.08);
+}
+
+.view-more-btn i {
+  font-size: 1rem;
+  transition: transform 0.35s ease;
+}
+
+.view-more-btn:hover {
+  background: linear-gradient(135deg, #1b2375, #3b44b0);
+  color: #ffffff;
+  border-color: #1b2375;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(27, 35, 117, 0.25);
+}
+
+.view-more-btn:hover i {
+  transform: translateY(3px);
+}
+
+.view-more-btn:active {
+  transform: scale(0.96);
+}
+
+/* ========================================== */
+/* ============ RESPONSIVE ================== */
+/* ========================================== */
+
+/* Tablet: 2 columns */
+@media (max-width: 992px) {
+  .services-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: -40px;
+  }
+  
+  .about-hero-bg1 {
+    padding: 60px 24px 90px;
+  }
+  .about-hero-title1 {
+    font-size: 2rem;
+  }
+
+  .service-image {
+    height: 210px;
+  }
+
+  .view-more-btn {
+    padding: 14px 36px;
+    font-size: 1rem;
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+  .services-wrapper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: -30px;
+    padding: 0 16px 30px;
+  }
+  
+  .about-hero-bg1 {
+    padding: 48px 16px 70px;
+  }
+  .about-hero-title1 {
+    font-size: 1.6rem;
+  }
+  
+  .service-image {
+    height: 220px;
+  }
+  
+  .service-content {
+    padding: 20px;
+  }
+
+  .service-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-content p {
+    font-size: 0.85rem;
+  }
+
+  .read-more-btn {
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .view-more-btn {
+    padding: 14px 28px;
+    font-size: 0.95rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
